@@ -1,9 +1,6 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+    <SigninForm />
     <router-view/>
   </div>
 </template>
@@ -30,3 +27,14 @@ nav {
   }
 }
 </style>
+<script>
+import Vue from "vue";
+import {Component} from "vue-property-decorator";
+import SigninForm from "@/components/SigninForm";
+
+@Component({
+  components: {SigninForm}
+})
+export default class App extends Vue {
+}
+</script>
